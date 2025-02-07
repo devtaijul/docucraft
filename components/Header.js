@@ -2,7 +2,7 @@ import Logo from "./Logo";
 import Search from "./Search";
 import Sidebar from "./Sidebar";
 
-export const Header = () => {
+export const Header = ({ docs }) => {
   return (
     <header className="fixed inset-y-0 left-0 z-40 px-6 pt-4 pb-8 overflow-y-auto border-r contents w-72 border-zinc-900/10 dark:border-white/10 lg:block xl:w-80">
       <Logo />
@@ -60,7 +60,7 @@ export const Header = () => {
         </div>
       </div>
       {/* <!-- Header Ends --> */}
-      <Sidebar />
+      <Sidebar docs={docs} />
     </header>
   );
 };
